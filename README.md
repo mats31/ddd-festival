@@ -1,5 +1,10 @@
-Skyfall - A Digital Design Days experiment
+Skyfall - A Digital Design Days festival experiment
 ===================
+
+![Alt text](readme.png?raw=true "Readme cover")
+
+Skyfall is my experiment for the 2017 Digital Design Days festival in Milano.
+You can see it online [here](http://www.mathis-biabiany.fr/ddd-festival/).
 
 It uses Three.js and Greensock as depencies.
 
