@@ -22,7 +22,7 @@ controls = new Controls({
 });
 
 // GUI settings
-gui = new dat.GUI();
+// gui = new dat.GUI();
 
 const sound = sono.create({
   id: 'skyfall',
