@@ -1,4 +1,4 @@
-threejs-starter-kit
+Skyfall - A Digital Design Days experiment
 ===================
 
 It uses Three.js and Greensock as depencies.
@@ -10,7 +10,7 @@ npm i
 
 ## Task
 ### Start development
-It starts a developement server at [localhost:9966](http://localhost:9966) with live reload.
+It starts a developement server with live reload.
 ```bash
 npm start
 ```
