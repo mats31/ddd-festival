@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skyfall - A DDD Festival experiment by Mathis Biabiany and Célia Lopez.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+
+    @font-face {
+      font-family: 'playfairdisplay';
+      src: url('fonts/playfairdisplay-regular.ttf') format('truetype'),
+           url('fonts/playfairdisplay-regular.svg#playfair_displayregular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'gotham-thin';
+      src: url('fonts/gotham-thin.otf') format('truetype'),
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body, html {
+      color: #fff5ce;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    .intro {
+      background: #1f1f1e;
+      font-family: 'playfairdisplay';
+      height: 100vh;
+      position: fixed;
+      width: 100vw;
+      z-index: 2;
+    }
+
+    .intro__text {
+      font-size: 35rem;
+      position: absolute;
+      opacity: 0.3;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    .title {
+      display: none;
+      font-family: 'playfairdisplay';
+      font-size: 3.619rem;
+      position: absolute;
+      left: 50vw;
+      top: 13.3333333333vh;
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    .title h1 {
+      margin: 0;
+      opacity: 0.3;
+    }
+
+    .title__subtitle {
+      font-family: 'gotham-thin';
+      font-size: 1.38rem;
+      display: block;
+      opacity: 0.9;
+    }
+
+    .title__links {
+      text-decoration: underline;
+    }
+
+    .description{
+      font-family: 'playfairdisplay';
+      font-size: 1.2rem;
+      opacity: 0.3;
+      bottom: 11vh;
+      left: 50vw;
+      letter-spacing: 0.2rem;
+      position: absolute;
+      transform: translate3d(-50%, 0, 0);
+      transition: opacity 0.5s;
+    }
+
+    .description:hover {
+      opacity: 0;
+    }
+
+    .controls{
+      bottom: 7vh;
+      left: 50vw;
+      position: absolute;
+      width: 85vw;
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    .controls__timeline {
+      display: inline-block;
+      height: 10px;
+      width: 94.8529411765%;
+    }
+
+    .controls__sound{
+      cursor: pointer;
+      display: inline-block;
+      opacity: 0;
+      width: 43px;
+      position: absolute;
+      left: 96%;
+      top: -10px;
+    }
+
+    .controls__sound::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0) scale3d(1, 1, 1);
+      transform-origin: 0% 50%;
+      transition: transform 0.4s;
+    }
+
+    .controls__sound.is--active::before{
+      transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+    }
+
+
+    .controls__sound img {
+      width: 100%;
+    }
+
+    .outro {
+      background: rgba(31, 31, 30, 0.5);
+      display: none;
+      font-family: 'playfairdisplay';
+      height: 100vh;
+      position: fixed;
+      opacity: 0;
+      width: 100vw;
+      z-index: 2;
+    }
+
+    .outro__text {
+      font-size: 2.5rem;
+      position: absolute;
+      left: 50%;
+      max-width: 280px;
+      text-align: center;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    .outro__text span {
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 20px;
+      position: relative;
+      opacity: 0.3;
+      font-size: 3.5rem;
+    }
+
+    .outro__text span::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: absolute;
+      top: 60%;
+      transform: translate3d(0, -50%, 0) scale3d(1, 1, 1);
+      transform-origin: 0% 50%;
+      transition: transform 0.4s;
+    }
+
+    .outro__text span:hover::before{
+      transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+    }
+
+    @media screen and (max-width:1024px) {
+      .intro__text {
+        font-size: 25rem;
+      }
+    }
+
+    @media screen and (max-width:750px) {
+      .intro__text {
+        font-size: 20rem;
+      }
+    }
+
+    @media screen and (max-width:640px) {
+
+      .intro {
+        pointer-events: none;
+        outline: none;
+      }
+      
+      .intro__text {
+        font-size: 10rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="js-intro intro">
+    <div class="js-intro__text intro__text">skyfall</div>
+  </div>
+
+  <div class="js-title title">
+    <h1>skyfall <span class="title__subtitle">by <a class="title__links">Mathis Biabiany</a> and <a class="title__links">Célia Lopez</a></h1>
+  </div>
+
+  <div class="description">
+    Move and drag to find me
+  </div>
+
+  <div class="js-controls controls">
+    <div class="js-controls__timeline controls__timeline"></div>
+    <div class="js-controls__sound controls__sound">
+      <img src="images/sound.png" alt="">
+    </div>
+  </div>
+
+  <div class="js-outro outro">
+    <div class="js-outro__text outro__text">
+      Thanks for watching
+      <span class="js-outro__replay ">replay</span>
+    </div>
+  </div>
+
+  <script src="./build/main.js"></script>
+</body>
+</html>
