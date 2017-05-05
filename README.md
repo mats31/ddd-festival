@@ -3,7 +3,7 @@ Skyfall - A Digital Design Days festival experiment
 
 ![Alt text](readme-cover.png?raw=true "Readme cover")
 
-Skyfall is my experiment for the 2017 Digital Design Days festival in Milano.
+Skyfall is our experiment for the 2017 Digital Design Days festival in Milano, made with [Célia Lopez](https://twitter.com/CliaLpz).
 You can see it online [here](http://www.mathis-biabiany.fr/ddd-festival/).
 
 It uses Three.js and Greensock as depencies.
