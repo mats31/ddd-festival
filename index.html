@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Skyfall - A DDD Festival experiment by Mathis Biabiany and Célia Lopez.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <style>
 
     @font-face {
@@ -81,7 +82,7 @@
       font-family: 'playfairdisplay';
       font-size: 1.2rem;
       opacity: 0.3;
-      bottom: 11vh;
+      bottom: 22vh;
       left: 50vw;
       letter-spacing: 0.2rem;
       position: absolute;
@@ -94,7 +95,7 @@
     }
 
     .controls{
-      bottom: 7vh;
+      bottom: 18vh;
       left: 50vw;
       position: absolute;
       width: 85vw;
@@ -184,6 +185,30 @@
 
     .outro__text span:hover::before{
       transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+    }
+
+    @media screen and (max-width:1024px) {
+      .intro__text {
+        font-size: 25rem;
+      }
+    }
+
+    @media screen and (max-width:750px) {
+      .intro__text {
+        font-size: 20rem;
+      }
+    }
+
+    @media screen and (max-width:640px) {
+
+      .intro {
+        pointer-events: none;
+        outline: none;
+      }
+
+      .intro__text {
+        font-size: 10rem;
+      }
     }
 
   </style>
