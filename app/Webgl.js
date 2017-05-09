@@ -52,7 +52,7 @@ export default class Webgl {
     this.index = 0;
 
     this.scaleValue = 0.1;
-    this.groundPos = -25;
+    this.groundPos = -15;
 
     this.readyToReset = false;
 
